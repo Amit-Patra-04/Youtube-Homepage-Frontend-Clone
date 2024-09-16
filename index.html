@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Youtube Frontend Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <div class="container">
+        <!-- Header / navbar -->
+        <header>
+            <nav class="navbar">
+                <div class="nav-section nav-left">
+                    <button class="nav-button menu-button">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <a href="#" class="nav-logo">
+                        <img src="data:image/jpeg;base64,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" alt="Logo" class="logo-image">
+                        <h2 class="logo-text">YouTube</h2>
+                    </a>
+                </div>
+
+                <div class="nav-section nav-center">
+                    <form action="#" class="search-form">
+                        <input type="search" placeholder="Search" required class="search-input">
+                        <button class="nav-button search-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                    <button class="nav-button mic-button">
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
+                </div>
+
+                <div class="nav-section nav-right">
+                    <button class="nav-button theme-button">
+                        <i class="fa-regular fa-moon"></i>
+                    </button>
+                    <img src="https://img.freepik.com/premium-vector/illustrations_995281-35700.jpg?ga=GA1.1.1970516185.1717939274&semt=ais_hybrid" alt="User Image" class="user-image">
+                </div>
+            </nav>
+        </header>
+    </div>
 </body>
 </html>
