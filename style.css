@@ -103,3 +103,40 @@
     border-left: 0;
 }
 
+/* Slidebar Design */
+
+.main-layout{
+    display: flex;
+}
+
+.main-layout .content-wrapper{
+    padding: 0 1rem;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.content-wrapper .category-list{
+    display: flex;
+    gap: .75rem;
+    overflow-x: auto;
+    padding: .75rem 0 .75rem;
+    scrollbar-width: none;
+}
+
+.category-list .category-button{
+    border: none;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: .4rem .75rem;
+    border-radius: .5rem;
+    background: var(--light-grey-color);
+}
+
+.content-wrapper .video-list{
+    display: grid;
+    gap: 1rem;
+    padding: 1.25rem 0 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
